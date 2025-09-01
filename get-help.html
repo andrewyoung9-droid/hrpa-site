@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Get Help — Human Privacy Rights Alliance (HPRA)</title>
+  <meta name="description" content="Confidential help from HPRA. Safe contact options, quick safety checks, and Minnesota crisis resources." />
+  <link rel="icon" href="/assets/hpra-shield.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0b1220;color:#e5e7eb}
+    a{color:inherit;text-decoration:none}
+    header{position:sticky;top:0;background:#0b1220cc;border-bottom:1px solid #1f2942}
+    .container{max-width:1120px;margin-inline:auto;padding:24px}
+    .nav{display:flex;align-items:center;justify-content:space-between}
+    .nav a{padding:10px 12px;border-radius:12px}
+    .cta{background:#22c55e;color:#06280f;font-weight:700}
+    .cta-outline{border:1px solid #2e3a58}
+    h1,h2,h3{margin:0 0 12px}
+    .panel{background:#0f172a;border:1px solid #1f2a46;border-radius:16px;padding:18px;margin-bottom:24px}
+    .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:18px}
+    .muted{color:#9fb0cd}
+    input,textarea,select{width:100%;background:#0b1220;border:1px solid #2a385a;border-radius:12px;padding:12px;color:#e5e7eb}
+    label{display:block;margin:8px 0 6px}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .btn{display:inline-block;padding:12px 16px;border-radius:12px;font-weight:700;border:1px solid #2a385a;background:#13243d}
+    .btn.primary{background:#22c55e;color:#06280f;border:none}
+    .note{font-size:12px;color:#9fb0cd}
+    footer{border-top:1px solid #1f2942;padding:24px 0;color:#9fb0cd}
+    .footgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px}
+    .footgrid a{display:block;padding:6px 0;color:#9fb0cd}
+    @media (max-width: 900px){ .grid,.row{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <a href="/index.html" aria-label="HPRA Home">
+          <img src="/assets/hpra-shield.svg" alt="HPRA logo" style="width:32px;height:32px;margin-right:8px"/>
+        </a>
+        <strong>Human Privacy Rights Alliance</strong>
+      </div>
+      <nav>
+        <a href="/index.html" class="cta-outline">Home</a>
+        <a href="/about.html" class="cta-outline">About</a>
+        <a href="/resources.html" class="cta-outline">Resources</a>
+        <a href="/get-help.html" class="cta">Get Help</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h1>Get Confidential Help</h1>
+      <p class="muted">If you are in immediate danger, call <a class="cta" style="padding:2px 8px;border-radius:8px" href="tel:911">911</a>. For non‑emergencies in Minnesota, see local <a href="#mn-numbers">non‑emergency numbers</a> below.</p>
+    </section>
+
+    <section class="grid">
+      <!-- Contact options / form -->
+      <div>
+        <div class="panel">
+          <h2>Contact HPRA</h2>
+          <p class="muted" style="margin-bottom:10px">Pick the option you’re most comfortable with. Don’t include passwords, SSNs, or bank details.</p>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 14px">
+            <a class="btn" href="mailto:help@hpra.example">Email: help@hpra.example</a>
+            <a class="btn" href="mailto:secure@hpra.example">PGP‑preferred: secure@hpra.example</a>
+          </div>
+
+          <!-- Static-friendly form (works with Netlify/Vercel/CF Pages if enabled) -->
+          <form name="hpra-help" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="hpra-help" />
+            <p style="display:none">
+              <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+            </p>
+            <div class="row">
+              <div>
+                <label for="name">Your name (or alias)</label>
+                <input id="name" name="name" autocomplete="name" />
+              </div>
+              <div>
+                <label for="contact">Safe contact method</label>
+                <input id="contact" name="contact" placeholder="Email or phone we can safely use" />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="county">County (MN)</label>
+                <input id="county" name="county" placeholder="e.g., Hennepin" />
+              </div>
+              <div>
+                <label for="urgency">Urgency</label>
+                <select id="urgency" name="urgency">
+                  <option value="normal">Normal</option>
+                  <option value="soon">Soon (24–48h)</option>
+                  <option value="urgent">Urgent</option>
+                </select>
+              </div>
+            </div>
+            <label for="topic">What’s happening?</label>
+            <select id="topic" name="topic">
+              <option>Cyberstalking/Harassment</option>
+              <option>Smear Campaign/Defamation</option>
+              <option>Device/Account Compromise</option>
+              <option>Network/Location Tracking</option>
+              <option>Bullying/Schools</option>
+              <option>Other/Not sure</option>
+            </select>
+            <label for="message" style="margin-top:8px">Brief description (no sensitive PII)</label>
+            <textarea id="message" name="message" rows="6" placeholder="A few sentences about the situation and what help you need"></textarea>
+            <div style="display:flex;gap:10px;align-items:center;margin-top:12px">
+              <button class="btn primary" type="submit">Request Help</button>
+              <span class="note">Submitting sends minimal data. We never sell or share your information without consent. See <a href="/privacy.html">Privacy Policy</a>.</span>
+            </div>
+          </form>
+        </div>
+
+        <div class="panel">
+          <h3>Safety Quick Checks</h3>
+          <ul class="muted" style="margin:0;padding-left:18px">
+            <li>Enable MFA on email, bank, and carrier accounts</li>
+            <li>Update OS & browsers; run reputable antivirus</li>
+            <li>Change Wi‑Fi admin password; remove unknown devices</li>
+            <li>Back up evidence to two places (cloud + offline)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sidebar: numbers & emergency info -->
+      <aside>
+        <div class="panel" id="mn-numbers">
+          <h2>Minnesota Contacts</h2>
+          <ul class="muted" style="margin:0;padding-left:18px">
+            <li><strong>Statewide Emergency:</strong> <a href="tel:911">911</a></li>
+            <li><strong>Minnesota 988 Lifeline:</strong> <a href="tel:988">988</a> (mental health crisis)</li>
+            <li><strong>Call 211:</strong> <a href="tel:211">211</a> (community resources)</li>
+            <li><strong>Domestic Violence Hotline:</strong> <a href="tel:18007997233">1‑800‑799‑7233</a></li>
+            <li><strong>Cybercrime Tips (FBI):</strong> <a href="https://www.ic3.gov" target="_blank" rel="noopener">ic3.gov</a></li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Confidentiality</h3>
+          <p class="muted">We handle your information with care: minimal data collection, secure storage, and opt‑in sharing only. You may use an alias until you’re comfortable.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="footgrid">
+      <div>
+        <strong>Human Privacy Rights Alliance</strong>
+        <p>Minnesota nonprofit advocating for digital & personal privacy. © <span id="y"></span> HPRA.</p>
+      </div>
+      <div>
+        <a href="/about.html">About</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/get-help.html">Get Help</a>
+      </div>
+      <div>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
