@@ -1,0 +1,131 @@
+/* ===========================
+   HPRA Light Theme (scoped)
+   Apply with: <body class="theme-hpra">
+   =========================== */
+
+.theme-hpra {
+  /* Cheerful, crisp palette */
+  --bg:            #fafcff;
+  --surface:       #ffffff;
+  --muted-surface: #f3f7ff;
+  --text:          #0f172a;  /* slate-900 */
+  --muted-text:    #475569;  /* slate-600 */
+  --primary:       #2e90fa;  /* lively blue */
+  --primary-700:   #1b6fd6;
+  --accent:        #f59e0b;  /* warm amber accent */
+  --success:       #10b981;
+  --danger:        #ef4444;
+  --ring:          rgba(46,144,250,.35);
+  --shadow:        0 10px 24px rgba(17, 24, 39, .04);
+  --radius:        14px;
+}
+
+.theme-hpra, .theme-hpra * { box-sizing: border-box; }
+.theme-hpra {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font: 16px/1.55 system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+/* Layout primitives */
+.theme-hpra .container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+.theme-hpra .grid { display: grid; gap: 20px; }
+.theme-hpra .grid.cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.theme-hpra .grid.cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+@media (max-width: 900px) {
+  .theme-hpra .grid.cols-2, .theme-hpra .grid.cols-3 { grid-template-columns: 1fr; }
+}
+
+/* Top nav */
+.theme-hpra header.site {
+  background: var(--surface);
+  border-bottom: 1px solid #e6eefc;
+  position: sticky; top: 0; z-index: 30;
+}
+.theme-hpra .nav {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.theme-hpra .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); text-decoration: none; }
+.theme-hpra .logo-badge {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), #7cc6ff);
+  box-shadow: var(--shadow);
+}
+.theme-hpra nav a {
+  color: var(--muted-text); text-decoration: none; margin-left: 18px;
+}
+.theme-hpra nav a:hover, .theme-hpra nav a[aria-current="page"] { color: var(--primary); }
+
+/* Hero */
+.theme-hpra .hero {
+  background: radial-gradient(1200px 400px at 20% -10%, #e9f3ff 10%, transparent 60%),
+              radial-gradient(900px 300px at 120% 0%, #fff3df 10%, transparent 55%),
+              var(--bg);
+  padding: 56px 0 28px;
+}
+.theme-hpra .hero .title { font-size: clamp(1.6rem, 3.2vw, 2.4rem); line-height: 1.15; margin: 6px 0; }
+.theme-hpra .hero .kicker { color: var(--primary); font-weight: 700; letter-spacing: .02em; }
+.theme-hpra .hero .subtitle { color: var(--muted-text); margin-top: 10px; max-width: 65ch; }
+
+/* Cards */
+.theme-hpra .card {
+  background: var(--surface);
+  border: 1px solid #eaf1ff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+.theme-hpra .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.theme-hpra .card p { color: var(--muted-text); margin: 0; }
+
+/* Buttons */
+.theme-hpra .btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid transparent; border-radius: 999px;
+  padding: 10px 16px; font-weight: 600; text-decoration: none;
+  background: var(--primary); color: #fff;
+  box-shadow: 0 6px 16px rgba(46,144,250,.25);
+  transition: transform .06s ease, box-shadow .2s ease, background .2s ease;
+}
+.theme-hpra .btn:hover { background: var(--primary-700); transform: translateY(-1px); }
+.theme-hpra .btn.outline { background: transparent; color: var(--primary); border-color: #cfe5ff; box-shadow: none; }
+.theme-hpra .btn.outline:hover { background: #f0f7ff; }
+
+/* Tags / chips */
+.theme-hpra .tag {
+  display: inline-block; padding: 6px 10px; border-radius: 999px;
+  background: #fff7e6; color: #8a5800; border: 1px solid #ffe3ad;
+  font-size: .85rem; font-weight: 600;
+}
+
+/* Sections */
+.theme-hpra section { padding: 28px 0; }
+.theme-hpra .section-title { font-size: 1.2rem; margin: 0 0 10px; }
+
+/* Footer (coexists with your existing footer) */
+.theme-hpra footer.site {
+  background: var(--surface);
+  border-top: 1px solid #e6eefc;
+  margin-top: 28px; padding: 20px 0;
+  color: var(--muted-text);
+}
+
+/* Forms (if you add a contact form later) */
+.theme-hpra input[type="text"], .theme-hpra input[type="email"], .theme-hpra textarea {
+  width: 100%; padding: 12px 14px; border-radius: 10px;
+  border: 1px solid #dbe7ff; background: #fff;
+}
+.theme-hpra input:focus, .theme-hpra textarea:focus {
+  outline: none; border-color: var(--primary); box-shadow: 0 0 0 4px var(--ring);
+}
+
+/* Accessibility */
+.theme-hpra a:focus, .theme-hpra button:focus, .theme-hpra .btn:focus {
+  outline: none; box-shadow: 0 0 0 4px var(--ring);
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-hpra *, .theme-hpra *::before, .theme-hpra *::after { transition: none !important; }
+}
