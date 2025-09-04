@@ -1,154 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About — Human Privacy Rights Alliance (HPRA)</title>
-  <meta name="description" content="About HPRA, a Minnesota nonprofit advocating for digital & personal privacy. Learn our mission, values, programs, and how we work." />
-  <meta name="theme-color" content="#0f172a" />
-  <meta property="og:title" content="About HPRA" />
-  <meta property="og:description" content="Who we are, how we help, and why privacy matters in Minnesota." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/assets/og-hpra.jpg" />
-  <meta property="og:url" content="https://example.org/about.html" />
-  <link rel="icon" href="/assets/hpra-shield.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root { --bg: #0b1220; --panel:#0f172a; --text:#e5e7eb; --muted:#94a3b8; --accent:#22c55e; --accent-2:#60a5fa; }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b1220 0%,#0c1222 30%,#0b1220 100%);color:var(--text)}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1120px;margin-inline:auto;padding:24px}
-    header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);background:#0b1220cc;border-bottom:1px solid #1f2942;z-index:30}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand img{width:32px;height:32px}
-    .nav a{padding:10px 12px;border-radius:12px}
-    .cta{background:var(--accent);color:#06280f;font-weight:700}
-    .cta-outline{border:1px solid #2e3a58}
-    h1{font-size:40px;line-height:1.1;margin:18px 0 10px}
-    .lead{color:var(--muted);font-size:18px;max-width:70ch}
-    .panel{background:radial-gradient(1200px 600px at 10% -10%, #122038 0%, #0f172a 40%, #0b1220 100%);border:1px solid #1f2a46;border-radius:18px;padding:20px}
-    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .twocol{display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
-    .card{background:#0f172a;border:1px solid #1f2a46;border-radius:16px;padding:18px}
-    footer{margin-top:48px;border-top:1px solid #1f2942;padding:24px 0;color:#9fb0cd}
-    .footgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px}
-    .footgrid a{display:block;padding:6px 0;color:#9fb0cd}
-    @media (max-width: 960px){ .grid{grid-template-columns:1fr 1fr} .twocol{grid-template-columns:1fr} }
-    @media (max-width: 640px){ .grid{grid-template-columns:1fr} h1{font-size:32px} }
-  </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Human Privacy Rights Alliance", "url": "https://humanprivacyrightsalliance.org/", "contactPoint": [{"@type": "ContactPoint", "contactType": "customer support", "email": "help@humanprivacyrightsalliance.org"}, {"@type": "ContactPoint", "contactType": "security", "email": "security@humanprivacyrightsalliance.org"}]}</script>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>About | Human Privacy Rights Alliance (HPRA)</title>
+<meta name="description" content="HPRA defends the dignity, safety, and digital rights of everyday people through advocacy, education, and support."/>
+<link rel="icon" href="data:;base64,iVBORw0KGgo="/>
+<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+<meta http-equiv="Referrer-Policy" content="no-referrer"/>
+<meta name="color-scheme" content="light"/>
+
+<style>
+  :root{
+    --bg:#f8fafc;
+    --text:#111827;
+    --muted:#4b5563;
+    --line:rgba(0,0,0,0.08);
+    --card:#ffffff;
+    --primary:#2563eb;
+    --primary-600:#1d4ed8;
+    --accent:#0ea5e9;
+    --good:#059669;
+    --warn:#d97706;
+    --danger:#dc2626;
+    --shadow:0 10px 30px rgba(0,0,0,0.05);
+    --radius:16px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; line-height:1.6; }
+  a { color: var(--primary); text-decoration: none; }
+  a:focus { outline: 3px solid rgba(37,99,235,0.35); outline-offset: 2px; }
+  .container { max-width:1100px; margin:0 auto; padding:0 1rem; }
+  header.nav { position:sticky; top:0; z-index:10; background:rgba(255,255,255,0.9); backdrop-filter:saturate(120%) blur(6px); border-bottom:1px solid var(--line); }
+  .nav-inner { display:flex; align-items:center; justify-content:space-between; height:64px; gap:1rem; }
+  .brand a { display:inline-flex; align-items:center; gap:.6rem; font-weight:800; letter-spacing:.3px; }
+  .brand .logo { width:28px; height:28px; border-radius:6px; background:linear-gradient(135deg,var(--primary),var(--accent)); box-shadow:var(--shadow); }
+  nav a { padding:.45rem .7rem; border-radius:10px; }
+  nav a.active, nav a:hover { background: rgba(37,99,235,0.08); }
+  .btn { display:inline-flex; align-items:center; gap:.5rem; padding:.7rem 1rem; border-radius:999px; background:var(--primary); color:#fff; box-shadow:var(--shadow); font-weight:600; }
+  .btn:hover { background:var(--primary-600); }
+  .btn.outline { background:#fff; color:var(--primary); border:1px solid var(--primary); }
+  .btn.outline:hover { background:rgba(37,99,235,0.06); }
+  .hero { background:radial-gradient(1200px 500px at 50% -200px, rgba(37,99,235,0.08), transparent 60%); padding:56px 0 24px; }
+  .hero h1 { margin:0 0 .5rem 0; font-size: clamp(1.6rem, 3.8vw, 2.6rem); line-height:1.2; }
+  .lead { color:var(--muted); max-width: 70ch; }
+  .cta-row { display:flex; gap:.8rem; flex-wrap:wrap; margin-top:1rem; }
+  .grid { display:grid; gap:1rem; grid-template-columns: repeat(12,1fr); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding:1rem; }
+  .section { padding: 2rem 0; }
+  h2 { font-size: clamp(1.25rem, 2.8vw, 1.8rem); margin:0 0 .25rem; }
+  h3 { font-size: clamp(1.05rem, 2.2vw, 1.25rem); margin:.2rem 0; }
+  .kpis { display:flex; gap:1rem; flex-wrap:wrap; }
+  .kpi { flex:1 1 220px; padding:1rem; border-radius:12px; border:1px dashed var(--line); background:#fff; }
+  .table { width:100%; border-collapse: collapse; border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+  .table th, .table td { padding:.9rem; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+  .table thead th { background:#f1f5f9; font-weight:700; }
+  .notice { padding:1rem; border-radius:12px; background:#fff; border:1px solid var(--line); }
+  footer { border-top:1px solid var(--line); padding:2rem 0; background:#fff; margin-top:2rem; }
+  .footgrid { display:grid; gap:1rem; grid-template-columns: repeat(12,1fr); }
+  .small { font-size:.95rem; }
+  @media (max-width:860px) { .grid, .footgrid { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
-  <header aria-label="Main navigation">
-    <div class="container nav">
+  <header class="nav">
+    <div class="container nav-inner">
       <div class="brand">
-        <a href="/index.html" aria-label="HPRA Home"><img src="/assets/hpra-shield.svg" alt="HPRA shield logo" /></a>
-        <strong>Human Privacy Rights Alliance</strong>
+        <span class="logo" aria-hidden="true"></span>
+        <a href="index.html" aria-label="HPRA Home">HPRA <span class="small" style="font-weight:600; color:var(--muted)">Human Privacy Rights Alliance</span></a>
       </div>
       <nav aria-label="Primary">
-        <a href="/index.html#mission" class="cta-outline">Mission</a>
-        <a href="/resources.html" class="cta-outline">Resources</a>
-        <a href="/index.html#get-help" class="cta">Get Help</a>
+        <a href="index.html" class="">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="why-mn-needs-hpra.html" class="">Why MN Needs HPRA</a>
+        <a href="programs.html" class="">Programs</a>
+        <a href="get-help.html" class="">Get Help</a>
+        <a href="support.html" class="">Support Us</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="panel">
-      <h1>About HPRA</h1>
-      <p class="lead">We are a Minnesota nonprofit dedicated to digital and personal privacy. HPRA helps people facing cyberstalking, coordinated harassment, online smear campaigns, and intrusive surveillance—and equips communities to prevent harm before it starts.</p>
-    </section>
-
-    <section class="twocol" style="margin-top:22px">
-      <div class="panel">
-        <h2 style="margin:0 0 8px">Our Mission</h2>
-        <p style="color:#9fb0cd">We defend privacy as a human right. We provide practical support for victims, publish plain‑language guides, and advocate for Minnesota‑first policies that protect people online and off.</p>
-        <h3 style="margin:16px 0 6px">Core Values</h3>
-        <ul style="margin:0;padding-left:18px;color:#9fb0cd">
-          <li>Dignity & Safety — survivors first, always</li>
-          <li>Clarity — plain language, practical steps</li>
-          <li>Privacy by Default — minimal data, strong protections</li>
-          <li>Community — we partner with local orgs, schools, and advocates</li>
-        </ul>
-      </div>
-      <aside class="panel" aria-label="Blueprint illustration">
-        <svg viewBox="0 0 560 300" width="100%" height="100%" aria-hidden="true">
-          <defs>
-            <linearGradient id="g2" x1="0" x2="1"><stop offset="0%" stop-color="#60a5fa"/><stop offset="100%" stop-color="#22c55e"/></linearGradient>
-          </defs>
-          <rect x="0" y="0" width="560" height="300" fill="none" stroke="#1f2a46" />
-          <g opacity="0.9" stroke="url(#g2)" fill="none" stroke-width="1.4">
-            <rect x="40" y="40" width="480" height="200" rx="6"/>
-            <path d="M40 120 H520"/>
-            <path d="M200 40 V240"/>
-            <path d="M360 40 V240"/>
-            <circle cx="120" cy="90" r="20"/>
-            <circle cx="280" cy="170" r="30"/>
-            <circle cx="440" cy="110" r="24"/>
-            <path d="M120 90 L280 170 L440 110"/>
-          </g>
-        </svg>
-      </aside>
-    </section>
-
-    <section style="margin-top:22px">
-      <div class="grid">
-        <div class="card">
-          <h3>What We Do</h3>
-          <p>Direct victim support, community education, and policy advocacy focused on Minnesota’s needs.</p>
-        </div>
-        <div class="card">
-          <h3>How We Work</h3>
-          <p>Privacy‑first operations: minimal data collection, secure communications, and survivor‑led practices.</p>
-        </div>
-        <div class="card">
-          <h3>Who We Serve</h3>
-          <p>Individuals, families, schools, and community orgs impacted by online harms and digital threats.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="panel" style="margin-top:22px">
-      <h2 style="margin:0 0 8px">Get Involved</h2>
-      <p class="lead">We’re building a statewide network of allies. Want to help with workshops, outreach, or policy research?</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
-        <a class="cta" style="padding:10px 14px;border-radius:12px" href="mailto:volunteer@hpra.example">Volunteer</a>
-        <a class="cta" style="padding:10px 14px;border-radius:12px;background:#60a5fa;color:#04192e" href="mailto:partners@hpra.example">Partner with Us</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="container" id="footer">
-    <div class="footgrid">
-      <div>
-        <strong>Human Privacy Rights Alliance</strong>
-        <p style="margin:6px 0;color:#9fb0cd;max-width:60ch">Minnesota nonprofit advocating for digital & personal privacy. © <span id="y"></span> HPRA.</p>
-      </div>
-      <div>
-        <a href="/about.html">About</a>
-        <a href="/index.html#mission">Mission</a>
-        <a href="/resources.html">Resources</a>
-		<a href="/get-help.html">Get Help </a>
-      </div>
-      <div>
-        <a href="/index.html#privacy" id="privacy">Privacy Policy</a>
-        <a href="/index.html#terms">Terms</a>
+  
+<section class="section">
+  <div class="container grid">
+    <div class="card" style="grid-column: span 7;">
+      <h2>Our Mission</h2>
+      <p>HPRA is dedicated to defending the dignity, safety, and digital rights of everyday people. In a world where online harassment, doxxing, stalking, and disinformation spill into real life, we empower individuals, educate communities, and strengthen the ability of law enforcement to protect privacy in both digital and physical spaces.</p>
+      <p>Privacy is not a luxury — it is a human right.</p>
+      <h3>Goals</h3>
+      <ul>
+        <li>Advocacy &amp; Awareness on cyberstalking, doxxing, bullying, and disinformation.</li>
+        <li>Support &amp; Resources for victims to protect their digital identities.</li>
+        <li>Community Education with practical, accessible privacy skills.</li>
+        <li>Law Enforcement Collaboration to improve investigation and prosecution of digital crimes.</li>
+        <li>Student Engagement through hands-on <em>HPRA Cyber Fellows</em> experiences.</li>
+        <li>Policy &amp; Reform to advance stronger privacy protections.</li>
+        <li>Holistic Privacy addressing both digital and physical risks.</li>
+      </ul>
+    </div>
+    <div class="card" style="grid-column: span 5;">
+      <h2>Why We Exist</h2>
+      <p>HPRA was founded out of lived experience: the relentless reality of stalking, coordinated harassment, and disinformation. What began as a personal fight to protect privacy has become a collective mission to help others.</p>
+      <p>We envision a future where privacy rights are upheld with the same seriousness as physical safety; where victims of digital crimes have clear pathways to justice; where students gain career‑building experience; and where people can participate online without fear.</p>
+      <div class="notice small">
+        <strong>Minnesota leadership perspective:</strong> In a 2024 conversation, Minnesota Attorney General Keith Ellison emphasized a dire need for organizations like HPRA to fill gaps traditional systems cannot. (Paraphrased.)
       </div>
     </div>
-  <div id="contacts-hpra" style="margin-top:1.25rem;font-size:.95rem;line-height:1.5">
-  <strong>Contact Human Privacy Rights Alliance:</strong>
-  <a href="mailto:info@humanprivacyrightsalliance.org?subject=General%20Inquiry%20-%20HPRA">info@humanprivacyrightsalliance.org</a> &middot;
-  <a href="mailto:help@humanprivacyrightsalliance.org?subject=Support%20Request%20-%20HPRA">help@humanprivacyrightsalliance.org</a> &middot;
-  <a href="mailto:security@humanprivacyrightsalliance.org?subject=Vulnerability%20Disclosure%20-%20HPRA">security@humanprivacyrightsalliance.org</a> &middot;
-  <a href="mailto:media@humanprivacyrightsalliance.org?subject=Media%20Inquiry%20-%20HPRA">media@humanprivacyrightsalliance.org</a> &middot;
-  <a href="mailto:donate@humanprivacyrightsalliance.org?subject=Donation%20Inquiry%20-%20HPRA">donate@humanprivacyrightsalliance.org</a>
-</div>
-</footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </div>
+</section>
+<section class="section">
+  <div class="container card">
+    <h2>Values</h2>
+    <ul>
+      <li><strong>Dignity:</strong> Every person deserves safety and respect, online and off.</li>
+      <li><strong>Accessibility:</strong> Clear, plain‑language guidance over jargon.</li>
+      <li><strong>Evidence‑based:</strong> Practical steps that hold up in real investigations.</li>
+      <li><strong>Collaboration:</strong> We complement existing services and strengthen them.</li>
+      <li><strong>Transparency:</strong> We show how donations are used to create impact.</li>
+    </ul>
+  </div>
+</section>
+
+
+  <footer>
+    <div class="container">
+      <div class="footgrid">
+        <div class="card" style="grid-column: span 6;">
+          <h3>About HPRA</h3>
+          <p class="small">The Human Privacy Rights Alliance (HPRA) defends the dignity, safety, and digital rights of everyday people through advocacy, education, and direct support.</p>
+        </div>
+        <div class="card" style="grid-column: span 3;">
+          <h3>Contact</h3>
+          <p class="small">
+            Email: <a href="mailto:contact@humanprivacyrightsalliance.org">contact@humanprivacyrightsalliance.org</a><br/>
+            Minneapolis–Saint Paul, Minnesota
+          </p>
+        </div>
+        <div class="card" style="grid-column: span 3;">
+          <h3>Transparency</h3>
+          <p class="small">
+            501(c)(3) application: <em>in progress</em><br/>
+            <a href="privacy-terms.html">Privacy &amp; Terms</a>
+          </p>
+        </div>
+      </div>
+      <p class="small" style="color:var(--muted); margin-top:1rem;">© 2025 Human Privacy Rights Alliance. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>

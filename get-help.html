@@ -1,83 +1,146 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Get Help — Human Privacy Rights Alliance (HPRA)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="If you're being harassed or stalked online, start here for immediate steps and support options.">
-  <link rel="stylesheet" href="assets/hpra.css">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Get Help | Human Privacy Rights Alliance (HPRA)</title>
+<meta name="description" content="HPRA defends the dignity, safety, and digital rights of everyday people through advocacy, education, and support."/>
+<link rel="icon" href="data:;base64,iVBORw0KGgo="/>
+<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+<meta http-equiv="Referrer-Policy" content="no-referrer"/>
+<meta name="color-scheme" content="light"/>
+
+<style>
+  :root{
+    --bg:#f8fafc;
+    --text:#111827;
+    --muted:#4b5563;
+    --line:rgba(0,0,0,0.08);
+    --card:#ffffff;
+    --primary:#2563eb;
+    --primary-600:#1d4ed8;
+    --accent:#0ea5e9;
+    --good:#059669;
+    --warn:#d97706;
+    --danger:#dc2626;
+    --shadow:0 10px 30px rgba(0,0,0,0.05);
+    --radius:16px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; line-height:1.6; }
+  a { color: var(--primary); text-decoration: none; }
+  a:focus { outline: 3px solid rgba(37,99,235,0.35); outline-offset: 2px; }
+  .container { max-width:1100px; margin:0 auto; padding:0 1rem; }
+  header.nav { position:sticky; top:0; z-index:10; background:rgba(255,255,255,0.9); backdrop-filter:saturate(120%) blur(6px); border-bottom:1px solid var(--line); }
+  .nav-inner { display:flex; align-items:center; justify-content:space-between; height:64px; gap:1rem; }
+  .brand a { display:inline-flex; align-items:center; gap:.6rem; font-weight:800; letter-spacing:.3px; }
+  .brand .logo { width:28px; height:28px; border-radius:6px; background:linear-gradient(135deg,var(--primary),var(--accent)); box-shadow:var(--shadow); }
+  nav a { padding:.45rem .7rem; border-radius:10px; }
+  nav a.active, nav a:hover { background: rgba(37,99,235,0.08); }
+  .btn { display:inline-flex; align-items:center; gap:.5rem; padding:.7rem 1rem; border-radius:999px; background:var(--primary); color:#fff; box-shadow:var(--shadow); font-weight:600; }
+  .btn:hover { background:var(--primary-600); }
+  .btn.outline { background:#fff; color:var(--primary); border:1px solid var(--primary); }
+  .btn.outline:hover { background:rgba(37,99,235,0.06); }
+  .hero { background:radial-gradient(1200px 500px at 50% -200px, rgba(37,99,235,0.08), transparent 60%); padding:56px 0 24px; }
+  .hero h1 { margin:0 0 .5rem 0; font-size: clamp(1.6rem, 3.8vw, 2.6rem); line-height:1.2; }
+  .lead { color:var(--muted); max-width: 70ch; }
+  .cta-row { display:flex; gap:.8rem; flex-wrap:wrap; margin-top:1rem; }
+  .grid { display:grid; gap:1rem; grid-template-columns: repeat(12,1fr); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding:1rem; }
+  .section { padding: 2rem 0; }
+  h2 { font-size: clamp(1.25rem, 2.8vw, 1.8rem); margin:0 0 .25rem; }
+  h3 { font-size: clamp(1.05rem, 2.2vw, 1.25rem); margin:.2rem 0; }
+  .kpis { display:flex; gap:1rem; flex-wrap:wrap; }
+  .kpi { flex:1 1 220px; padding:1rem; border-radius:12px; border:1px dashed var(--line); background:#fff; }
+  .table { width:100%; border-collapse: collapse; border:1px solid var(--line); border-radius:12px; overflow:hidden; }
+  .table th, .table td { padding:.9rem; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+  .table thead th { background:#f1f5f9; font-weight:700; }
+  .notice { padding:1rem; border-radius:12px; background:#fff; border:1px solid var(--line); }
+  footer { border-top:1px solid var(--line); padding:2rem 0; background:#fff; margin-top:2rem; }
+  .footgrid { display:grid; gap:1rem; grid-template-columns: repeat(12,1fr); }
+  .small { font-size:.95rem; }
+  @media (max-width:860px) { .grid, .footgrid { grid-template-columns: 1fr; } }
+</style>
 </head>
-<body class="theme-hpra">
-  <header class="site">
-    <div class="container nav">
-      <a class="logo" href="hpra.html">
-        <span class="logo-badge" aria-hidden="true"></span>
-        Human Privacy Rights Alliance
-      </a>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <a href="index.html" aria-label="HPRA Home">HPRA <span class="small" style="font-weight:600; color:var(--muted)">Human Privacy Rights Alliance</span></a>
+      </div>
       <nav aria-label="Primary">
-        <a href="hpra.html">Home</a>
-        <a href="resources.html">Resources</a>
-        <a href="get-help.html" aria-current="page">Get Help</a>
-        <a href="privacy.html">Privacy</a>
+        <a href="index.html" class="">Home</a>
+        <a href="about.html" class="">About</a>
+        <a href="why-mn-needs-hpra.html" class="">Why MN Needs HPRA</a>
+        <a href="programs.html" class="">Programs</a>
+        <a href="get-help.html" class="active">Get Help</a>
+        <a href="support.html" class="">Support Us</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <div class="kicker">HPRA</div>
-      <h1 class="title">Get Help Now</h1>
-      <p class="subtitle">If you’re in immediate danger, call your local emergency number. Otherwise, follow these steps to stabilize your accounts and start a safe paper trail.</p>
-      <div style="margin-top:14px;">
-        <a class="btn" href="resources.html#checklists">View checklists</a>
-        <a class="btn outline" href="mailto:help@humanprivacyrightsalliance.org">Email HPRA</a>
-      </div>
+  
+<section class="section">
+  <div class="container">
+    <div class="notice">
+      <strong>If you are in immediate danger, call 911.</strong><br/>
+      If you believe a crime is occurring, contact local law enforcement. HPRA does not provide emergency services.
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
+<section class="section">
+  <div class="container grid">
+    <div class="card" style="grid-column: span 7;">
+      <h2>First steps if you’re being targeted</h2>
+      <ol>
+        <li><strong>Preserve evidence:</strong> Take dated screenshots, save URLs, export platform data. Don’t engage with the abuser.</li>
+        <li><strong>Secure accounts:</strong> Change passwords, enable MFA, review recovery emails/phones, revoke suspicious sessions.</li>
+        <li><strong>Device check:</strong> Update OS/apps, run reputable AV, review installed apps/extensions; consider a fresh browser profile.</li>
+        <li><strong>Lock down data:</strong> Remove personal info from public profiles; consider data‑broker opt‑outs.</li>
+        <li><strong>Report &amp; escalate:</strong> Use platform reporting; if threats are explicit, make a police report and request an incident number.</li>
+      </ol>
+    </div>
+    <div class="card" style="grid-column: span 5;">
+      <h2>Contact HPRA</h2>
+      <p class="small">For non‑emergency support and referrals:</p>
+      <p class="small">Email: <a href="mailto:support@humanprivacyrightsalliance.org">support@humanprivacyrightsalliance.org</a><br/>
+      We aim to respond within 2–3 business days.</p>
+      <h3>Documentation tips</h3>
+      <ul class="small">
+        <li>Keep a log with dates/times, handles, and links.</li>
+        <li>Download full message threads when possible.</li>
+        <li>Preserve original files; avoid altering metadata.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  <footer>
     <div class="container">
-      <h2 class="section-title">First steps (10–20 minutes)</h2>
-      <div class="grid cols-3">
-        <div class="card">
-          <h3>Secure your accounts</h3>
-          <p>Change passwords (unique + manager), enable MFA, update recovery options, and sign out of other sessions.</p>
+      <div class="footgrid">
+        <div class="card" style="grid-column: span 6;">
+          <h3>About HPRA</h3>
+          <p class="small">The Human Privacy Rights Alliance (HPRA) defends the dignity, safety, and digital rights of everyday people through advocacy, education, and direct support.</p>
         </div>
-        <div class="card">
-          <h3>Capture evidence</h3>
-          <p>Screenshot messages, save URLs, note dates/times. Don’t engage; document calmly.</p>
+        <div class="card" style="grid-column: span 3;">
+          <h3>Contact</h3>
+          <p class="small">
+            Email: <a href="mailto:contact@humanprivacyrightsalliance.org">contact@humanprivacyrightsalliance.org</a><br/>
+            Minneapolis–Saint Paul, Minnesota
+          </p>
         </div>
-        <div class="card">
-          <h3>Reduce exposure</h3>
-          <p>Lock down privacy settings, review app permissions, and consider limiting public posts temporarily.</p>
+        <div class="card" style="grid-column: span 3;">
+          <h3>Transparency</h3>
+          <p class="small">
+            501(c)(3) application: <em>in progress</em><br/>
+            <a href="privacy-terms.html">Privacy &amp; Terms</a>
+          </p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <h2 class="section-title">Report & Support</h2>
-      <div class="grid cols-3">
-        <div class="card">
-          <h3>Report to platforms</h3>
-          <p>Use built-in tools to report harassment, impersonation, and doxxing. Keep ticket numbers.</p>
-        </div>
-        <div class="card">
-          <h3>Talk to someone</h3>
-          <p>Reach a trusted person or a local support line. If mental health is a concern, consider seeking professional support.</p>
-        </div>
-        <div class="card">
-          <h3>Contact HPRA</h3>
-          <p>We can help you prioritize steps and organize evidence. <a href="mailto:help@humanprivacyrightsalliance.org">help@humanprivacyrightsalliance.org</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="site">
-    <div class="container">
-      <div class="muted">© 2025 Human Privacy Rights Alliance</div>
+      <p class="small" style="color:var(--muted); margin-top:1rem;">© 2025 Human Privacy Rights Alliance. All rights reserved.</p>
     </div>
   </footer>
 </body>
