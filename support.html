@@ -97,26 +97,21 @@
       <h2>Donate</h2>
       <p class="small">Use our secure donation link:</p>
       
-<!-- PayPal Donate (Hosted Button) -->
-<div class="card" style="padding:1rem; border:1px dashed var(--line); background:#fff; border-radius:12px;">
-  <div id="paypal-container-donate"></div>
-  <script src="https://www.paypal.com/sdk/js?components=hosted-buttons&currency=USD" data-sdk-integration-source="button-factory"></script>
-  <script>
-    // Replace with your real Hosted Button ID from PayPal
-    paypal.HostedButtons({
-      hostedButtonId: "REPLACE_WITH_YOUR_HOSTED_BUTTON_ID"
-    }).render("#paypal-container-donate");
-  </script>
-  <p class="small" style="color:var(--muted); margin-top:.5rem;">Tip: In your PayPal dashboard, create a Hosted Donate Button and paste its ID above.</p>
-</div>
-
-      <h3>Other ways to give</h3>
-      <ul class="small">
-        <li>Employer matching (ask your HR team).</li>
-        <li>In‑kind services (training space, printing, software).</li>
-        <li>Corporate sponsorships and partnerships.</li>
-      </ul>
-    </div>
+<section id="donate" aria-labelledby="donate-title" style="margin:24px 0">
+  <h2 id="donate-title" style="margin:0 0 .5rem 0">Donate</h2>
+  <div style="background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:16px;box-shadow:0 10px 30px rgba(0,0,0,.05);">
+    <form action="https://www.paypal.com/donate" method="post" target="_top" class="donate-form" style="display:flex;gap:.75rem;align-items:center;flex-wrap:wrap">
+      <input type="hidden" name="campaign_id" value="JG9UWYQ4YBFSE" />
+      <button type="submit" aria-label="Donate via PayPal" 
+              style="appearance:none;border:0;background:#2563eb;color:#fff;font-weight:600;border-radius:999px;padding:.6rem 1rem;cursor:pointer">
+        Donate via PayPal
+      </button>
+      <noscript>
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="Donate with PayPal button" />
+      </noscript>
+      <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" style="border:0" />
+    </form>
+    <p style="color:#5b6b85;margin:.5rem 0 0 0;font-size:.95rem">Your gift funds direct victim support, clinics, and HRPA Cyber Fellows in Minnesota.</p>
   </div>
 </section>
 
